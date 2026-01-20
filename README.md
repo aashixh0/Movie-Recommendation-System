@@ -60,7 +60,7 @@ python
 ### Generate Recommendations (Notebook)
 Run the clean notebook:
 ```bash
-jupyter notebook Movie_Recommender_System_Clean.ipynb
+jupyter notebook recommendation.ipynb
 ```
 
 ### Launch Web App
@@ -75,15 +75,16 @@ Then open your browser to `http://localhost:8501`
 ```
 movie-recommender/
 ├── app.py                              # Streamlit web application
-├── Movie_Recommender_System_Clean.ipynb # ML model & training
+├── recommendation.ipynb # ML model & training
 ├── requirements.txt                    # Python dependencies
 ├── .gitignore                         # Git ignore file
 ├── dataset/
 │   ├── tmdb_5000_movies.csv
 │   └── tmdb_5000_credits.csv
-├── movies_improved.pkl                # Trained model data
-├── similarity_improved.pkl            # Similarity matrix
-└── tfidf_vectorizer.pkl              # TF-IDF vectorizer
+├── model/
+    ├── movies_improved.pkl                # Trained model data
+    ├── similarity_improved.pkl            # Similarity matrix
+    └── tfidf_vectorizer.pkl              # TF-IDF vectorizer
 ```
 
 ## Dataset
@@ -164,7 +165,7 @@ pip install -r requirements.txt
 **Issue**: "FileNotFoundError: movies_improved.pkl"
 ```bash
 # Run the notebook to generate model files
-jupyter notebook Movie_Recommender_System_Clean.ipynb
+jupyter notebook recommendation.ipynb
 ```
 
 **Issue**: API Key errors for posters
@@ -172,9 +173,6 @@ jupyter notebook Movie_Recommender_System_Clean.ipynb
 - Check TMDb API key validity
 - Verify request rate limits
 
-## License
-
-This project is licensed under the MIT License - see LICENSE file for details.
 
 ## Author
 
